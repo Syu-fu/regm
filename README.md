@@ -72,6 +72,6 @@ source <(regm completions zsh)
 
 Add config.fish
 
-```
-source (COMMAND completions fish | psub)
+```fish
+source (regm completions fish | psub)
 ```
