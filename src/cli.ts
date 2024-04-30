@@ -12,6 +12,8 @@ type Options = {
   re2: boolean;
 };
 
+const version = "0.0.2";
+
 const execute = async (options: Options) => {
   if (Object.keys(options).length > 2) {
     throw new Error("Only one flavor option can be selected.");
@@ -46,7 +48,7 @@ export const run = async () => {
       .name("regm")
       .usage("[OPTIONS]")
       .description("Interactive regular expression matcher.")
-      .version("0.0.1")
+      .version(version)
       .option("-f, --file <file:string>", "Read from file.", { required: true })
       .group("Flavor options(choose one, defaults to ECMA flavor)")
       .option("-e, --ecma", "ECMA flavor.")
