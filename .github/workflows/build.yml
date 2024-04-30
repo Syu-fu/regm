@@ -19,16 +19,16 @@ jobs:
       - name: Compile
         run: |
           # Linux
-          deno compile --target x86_64-unknown-linux-gnu --allow-write --allow-read regm.ts
+          deno compile --target x86_64-unknown-linux-gnu --allow-read --allow-env regm.ts
           zip -r regm-x86_64-unknown-linux-gnu.zip regm
           # Windows
-          deno compile --target x86_64-pc-windows-msvc --allow-write --allow-read regm.ts
+          deno compile --target x86_64-pc-windows-msvc --allow-read --allow-env regm.ts
           zip -r regm-x86_64-pc-windows-msvc.zip regm.exe
           # Mac(Intel)
-          deno compile --target x86_64-apple-darwin --allow-write --allow-read regm.ts
+          deno compile --target x86_64-apple-darwin --allow-read --allow-env regm.ts
           zip -r regm-x86_64-apple-darwin.zip regm
           # Mac(Apple Silicon)
-          deno compile --target aarch64-apple-darwin --allow-write --allow-read regm.ts
+          deno compile --target aarch64-apple-darwin --allow-read --allow-env regm.ts
           zip -r regm-aarch64-apple-darwin.zip regm
       - name: Release
         uses: softprops/action-gh-release@v1
