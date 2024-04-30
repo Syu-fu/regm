@@ -13,7 +13,7 @@ supporting various flavors of regular expressions such as ECMA, Basic (BRE), Ext
 
 ```bash
 # Deno
-$ deno install --allow-env --allow-read https://deno.land/x/regm/regm --name regm --force
+$ deno install --allow-env --allow-read --import-map https://deno.land/x/regm/import_map.json https://deno.land/x/regm/regm.ts --name regm --force
 
 # Homebrew
 $ brew install Syu-fu/tap/regm
