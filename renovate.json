@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticPrefixFixDepsChoreOthers",
+    "github>Omochice/renovate-config:deno"
+  ],
+  "timezone": "Asia/Tokyo",
+  "prConcurrentLimit": 5,
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "github actions deps"
+    }
+  ]
+}
